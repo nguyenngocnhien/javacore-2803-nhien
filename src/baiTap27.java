@@ -5,8 +5,21 @@ public class baiTap27 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số thập phân : ");
         int n,i;
+        String hex = "";
+        char charhex;
         n= sc.nextInt();
-        i=n%8;
-        System.out.println(i);
+        if (n<=0) return;
+        while (n>0){
+            i = n%16;
+            if(i<=9 && i>=0){
+                charhex =(char) (i+'0');
+            }
+            else {
+                charhex= (char) (i - 10 + 'A');
+            }
+            hex = charhex+ hex;
+            n= n/16;
+        }
+        System.out.println(hex);
     }
 }
