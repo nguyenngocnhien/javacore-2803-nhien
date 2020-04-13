@@ -1,3 +1,5 @@
+package vongLap;
+
 import java.util.Scanner;
 
 public class baiTap27 {
