@@ -1,6 +1,9 @@
 package OOP;
 
+import java.util.Scanner;
+
 public class Student {
+    Scanner sc = new Scanner(System.in);
     private String ten;
     private float diem;
     private int tuoi;
@@ -19,13 +22,33 @@ public class Student {
         this.chuyenNganh = chuyenNganh;
         this.diaChi = diaChi;
     }
-
+    public void nhapSV(){
+        System.out.print("Tên : ");
+        this.ten = sc.nextLine();
+        System.out.print("Tuổi : ");
+        this.tuoi = Integer.valueOf(sc.nextLine());
+        System.out.print("Địa chỉ : ");
+        this.diaChi = sc.nextLine();
+        System.out.print("Chuyên Ngành : ");
+        this.chuyenNganh = sc.nextLine();
+        System.out.print("Mssv : ");
+        this.mssv = sc.nextLine();
+        System.out.print("Điểm : ");
+        this.diem = Float.valueOf(sc.nextLine());
+    }
+    public String toString(){
+        return "Họ và tên: "+this.ten+"Tuổi: "+this.tuoi+"Địa Chỉ: "+this.diaChi+"Chuyên Ngành: "+this.chuyenNganh
+                +"Mssv: "+this.mssv+"Điểm: "+this.diem;
+    }
     public String getTen() {
         return ten;
     }
 
     public void setTen(String ten) {
-        this.ten = ten;
+        if (ten==null || ten.isEmpty() ){
+            System.out.println("Hãy nhập tên");
+        }
+        else this.ten = ten;
     }
 
     public float getDiem() {
@@ -33,7 +56,10 @@ public class Student {
     }
 
     public void setDiem(float diem) {
-        this.diem = diem;
+        if (diem>=0 && diem<=10){
+            this.diem = diem;
+        }
+        else System.out.println("Điểm không hợp lệ");
     }
 
     public int getTuoi() {
@@ -41,7 +67,10 @@ public class Student {
     }
 
     public void setTuoi(int tuoi) {
-        this.tuoi = tuoi;
+        if (tuoi>18){
+            this.tuoi = tuoi;
+        }
+        else System.out.println("Tuổi không hợp lệ");
     }
 
     public String getMssv() {

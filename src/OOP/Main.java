@@ -11,19 +11,9 @@ public class Main {
         Student[] students = new Student[n];
         for (int i=0;i<n;i++){
             System.out.println("Nhập vào thông tin sinh viên thứ "+(i+1)+" : ");
-            students[i] = new Student();
-            System.out.print("Tên : ");
-            students[i].setTen(sc.nextLine());
-            System.out.print("Tuổi : ");
-            students[i].setTuoi(Integer.valueOf(sc.nextLine()));
-            System.out.print("Địa chỉ : ");
-            students[i].setDiaChi(sc.nextLine());
-            System.out.print("Chuyên Ngành : ");
-            students[i].setChuyenNganh(sc.nextLine());
-            System.out.print("Mssv : ");
-            students[i].setMssv(sc.nextLine());
-            System.out.print("Điểm trung bình : ");
-            students[i].setDiem(Float.valueOf(sc.nextLine()));
+            Student student = new Student();
+            student.nhapSV();
+            students[i]=student;
         }
         Student sx = null;
         for (int i=0;i<students.length-1;i++){
