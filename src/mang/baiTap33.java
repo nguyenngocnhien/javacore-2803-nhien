@@ -7,14 +7,17 @@ public class baiTap33 {
         System.out.println("Nhập một trạng thái : ");
         String str = sc.nextLine();
         String[] word = str.split(" ");
-            String res ="";
+            int max=0;
             for (int i = 0;i< word.length; i++){
-                for (int j = i;j<word.length;j++){
-                    if (word[i].length()>word[j].length()){
-                        res = word[i];
-                    }
+                if (word[i].length()>max){
+                    max=word[i].length();
                 }
             }
-        System.out.print("Từ dài nhất là : "+res);
+        System.out.println("Từ dài nhất trong câu là : ");
+            for (int i=0;i<word.length;i++){
+                if (word[i].length()==max){
+                    System.out.print(word[i]+" , ");
+                }
+            }
     }
 }

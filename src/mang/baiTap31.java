@@ -3,26 +3,42 @@ package mang;
 import java.util.Scanner;
 
 public class baiTap31 {
-    public static void main(String[] args) {
-        int arr[] = new int[7];
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Mời nhập vào giá trị của mảng : ");
+    Scanner sc = new Scanner(System.in);
+    int arr[];
+    public void nhapmang(){
+        System.out.print("Mời nhập  vào số phần tử trong mảng : ");
+        int n=sc.nextInt();
+        arr = new int[n];
         for (int i = 0;i<=arr.length-1;i++){
+            System.out.print("Mời bạn nhập phần tử thứ "+(i+1)+" : ");
             arr[i] = sc.nextInt();
         }
-        System.out.println("Mảng được nhập vào là : ");
-        for (int x : arr) System.out.print(x+" ");
-        for (int i = 0; i<=arr.length-1;i++){
-            int temp = arr[i];
-            for (int j = 0; j <= arr.length-1;j++){
-                if (temp<(arr[j]+1))
-                {
-                    System.out.println(temp);
-                }
-            }
+        System.out.println("Mảng vừa nhập là : ");
+        for (int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
         }
-        System.out.println("Chuỗi ");
-        for (int x : arr) System.out.println(x);
-
+            }
+     public void timChuoiLienTiep(){
+        int dem=1;
+        int max=0;
+        /*1 2 3 1*/
+        System.out.println();
+        for (int i=0;i<arr.length-1;i++){
+                if (arr[i+1]-arr[i]==1){
+                    dem++;
+                    if (dem>max){
+                        max=dem;
+                    }
+                }
+                else {
+                    dem=1;
+                }
+        }
+         System.out.println("Độ dài liên tiếp lớn nhất trong mảng là : "+max);
+     }
+    public static void main(String[] args) {
+    baiTap31 bt = new baiTap31();
+    bt.nhapmang();
+    bt.timChuoiLienTiep();
     }
 }
