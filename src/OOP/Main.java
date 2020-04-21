@@ -3,6 +3,7 @@ package OOP;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập số sinh viên : ");
@@ -12,7 +13,18 @@ public class Main {
         for (int i=0;i<n;i++){
             System.out.println("Nhập vào thông tin sinh viên thứ "+(i+1)+" : ");
             Student student = new Student();
-            student.nhapSV();
+            System.out.print("Tên : ");
+            student.setTen(sc.nextLine());
+            System.out.print("Tuổi : ");
+            student.setTuoi(Integer.valueOf(sc.nextLine()));
+            System.out.print("Địa chỉ : ");
+            student.setDiaChi(sc.nextLine());
+            System.out.print("Chuyên Ngành : ");
+            student.setChuyenNganh(sc.nextLine());
+            System.out.print("Mssv : ");
+            student.setMssv(sc.nextLine());
+            System.out.print("Điểm : ");
+            student.setDiem(Float.valueOf(sc.nextLine()));
             students[i]=student;
         }
         Student sx = null;

@@ -3,7 +3,6 @@ package OOP;
 import java.util.Scanner;
 
 public class Student {
-    Scanner sc = new Scanner(System.in);
     private String ten;
     private float diem;
     private int tuoi;
@@ -12,29 +11,6 @@ public class Student {
     private String diaChi;
 
     public Student() {
-    }
-
-    public Student(String ten, float diem, int tuoi, String mssv, String chuyenNganh, String diaChi) {
-        this.ten = ten;
-        this.diem = diem;
-        this.tuoi = tuoi;
-        this.mssv = mssv;
-        this.chuyenNganh = chuyenNganh;
-        this.diaChi = diaChi;
-    }
-    public void nhapSV(){
-        System.out.print("Tên : ");
-        this.ten = sc.nextLine();
-        System.out.print("Tuổi : ");
-        this.tuoi = Integer.valueOf(sc.nextLine());
-        System.out.print("Địa chỉ : ");
-        this.diaChi = sc.nextLine();
-        System.out.print("Chuyên Ngành : ");
-        this.chuyenNganh = sc.nextLine();
-        System.out.print("Mssv : ");
-        this.mssv = sc.nextLine();
-        System.out.print("Điểm : ");
-        this.diem = Float.valueOf(sc.nextLine());
     }
     public String toString(){
         return "Họ và tên: "+this.ten+"Tuổi: "+this.tuoi+"Địa Chỉ: "+this.diaChi+"Chuyên Ngành: "+this.chuyenNganh
