@@ -1,4 +1,4 @@
-package OOP;
+package OOP.QuanLySinhVien;
 
 import java.util.Scanner;
 
