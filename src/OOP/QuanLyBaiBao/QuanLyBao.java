@@ -3,24 +3,26 @@ package OOP.QuanLyBaiBao;
 import java.util.Scanner;
 
 public class QuanLyBao {
-    int index;
-    BaiBao[] baiBaos = new BaiBao[5];
-    public void baiBaoList(){
-        index=0;
+    BaiBao[] baiBaos = new BaiBao[3];
+    public void xemTinMoiNhat(){
+        int baiMoi=baiBaos[1].getThoiGianUpBai();
         for (int i=0;i<baiBaos.length;i++){
-            baiBaos[i] = new BaiBao();
+            if (baiBaos[i].getThoiGianUpBai()>baiMoi){
+                baiMoi=baiBaos[i].getThoiGianUpBai();
+            }
         }
+        System.out.println(baiMoi);
     }
     public void themBaiBao(){
-            baiBaos[index]= new BaiBao();
-            BaiBao baiBao = new BaiBao();
+        BaiBao baiBao = new BaiBao();
+        for (int i=0;i<baiBaos.length;i++){
             baiBao.nhapBao();
-            baiBaos[index]=baiBao;
+            baiBaos[i]=baiBao;
+        }
     }
     public void hienThiBao(){
         for (int i=0;i<baiBaos.length;i++){
             System.out.println(baiBaos[i].toString());
         }
     }
-
 }

@@ -13,6 +13,7 @@ public class Main {
             System.out.println("|0. Thoat ung dung|");
             System.out.println("|1. Them Bai Bao|");
             System.out.println("|2. Hien Thi Danh Sach Bao|");
+            System.out.println("|3. Xem Tin Moi Nhat|");
             System.out.println("-------------------------------------");
             x=in.nextInt();
             System.out.println("======>>");
@@ -24,6 +25,8 @@ public class Main {
                 case 2:
                     quanLyBao.hienThiBao();
                     break;
+                case 3:
+                    quanLyBao.xemTinMoiNhat();
             }
         }while(x!=0);
         System.out.println("");
