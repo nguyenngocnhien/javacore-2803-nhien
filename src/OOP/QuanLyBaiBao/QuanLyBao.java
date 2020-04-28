@@ -7,15 +7,16 @@ public class QuanLyBao {
     public void xemTinMoiNhat(){
         int baiMoi=baiBaos[1].getThoiGianUpBai();
         for (int i=0;i<baiBaos.length;i++){
-            if (baiBaos[i].getThoiGianUpBai()>baiMoi){
+            if (baiBaos[i].getThoiGianUpBai()<baiMoi){
                 baiMoi=baiBaos[i].getThoiGianUpBai();
             }
         }
         System.out.println(baiMoi);
     }
     public void themBaiBao(){
-        BaiBao baiBao = new BaiBao();
+        BaiBao baiBao;
         for (int i=0;i<baiBaos.length;i++){
+            baiBao = new BaiBao();
             baiBao.nhapBao();
             baiBaos[i]=baiBao;
         }
