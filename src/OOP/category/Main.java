@@ -14,7 +14,7 @@ public class Main {
             System.out.println("2: Hiển thị danh sách báo");
             System.out.println("3: Tìm báo thông qua CategoryID");
             System.out.println("4: Sửa báo thông qua idNews");
-            System.out.println("--------------------------------s");
+            System.out.println("---------------------------------");
             x=sc.nextInt();
             System.out.println("======>");
             switch (x){
