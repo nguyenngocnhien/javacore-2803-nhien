@@ -1,6 +1,7 @@
 package OOP.rectangle;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Rectangle {
@@ -10,7 +11,6 @@ public class Rectangle {
     Rectangle rectangle;
     public Rectangle() {
     }
-
     public int getWidth() {
         return width;
     }
